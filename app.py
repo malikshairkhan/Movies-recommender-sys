@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 import pickle
 import requests
-
+from sklearn.metrics.pairwise import cosine_similarity
 
 def fetch_poster(movie_id):
     response = requests.get("https://api.themoviedb.org/3/movie/{}?api_key=2203a15e775cb671f3177289972a5376&language=en-US".format(movie_id))
